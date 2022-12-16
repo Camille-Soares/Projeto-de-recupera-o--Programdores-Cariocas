@@ -1,0 +1,444 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+   
+}
+
+body{
+    background: linear-gradient(to top right, #081826 30%, #F27405) ;
+}
+/* Fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+/*cores */
+
+:root {
+    --cor-1:#fff;
+    --cor-2: #000;
+    --cor-3: #081826;
+    --cor-4: #364959;
+    --cor-5: #F27405;
+    --cor-6: #F25C05;
+    --cor-7: #8C2703;
+
+
+   /* --font-padrao: (a decidir) */
+}
+ 
+
+/*--------- Cabecalho --------- */ 
+
+/*menu*/
+#cabecalho{
+    margin-bottom: 0px;
+    padding: 20;
+    width: 100%;
+    height: 45rem; 
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+ 
+}
+
+nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    align-items:center;
+    width: 100%;
+    height: 80px;
+    background: var(--cor-2);
+    opacity: 0.87;
+}
+
+nav menu ul{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    text-transform: capitalize;
+    font-weight: 555;
+   
+}
+.botoesm{
+    list-style: none;
+}
+nav menu li{
+    margin-left: 32px; 
+}
+
+nav menu li a{
+    color: var(--cor-1);
+}
+/* Logo */
+ .logo{
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+.logo a{
+    color: var(--cor-5);
+}
+.logo a:hover{
+    transition: 0.3s;
+    color: var(--cor-7);
+} 
+ /* botão */
+
+  .botao-login {
+    background: linear-gradient(to bottom left, #494e49 30%, #7e3308);
+    font-family:'Roboto', sans-serif;
+    font-weight: 650;
+    border: none;
+    color:var(--cor-1);
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 10em;
+    height: 40px;
+    text-shadow: #000 3px -1px 3px;
+    transition: background 500ms, color 500ms;
+}
+
+.botao-login:hover{
+    background: transparent;
+    border: 2px solid var(--cor-4);
+    color: var(--cor-6);
+
+} 
+
+/* banner*/
+ #cabecalho:nth-of-type(1){
+    background-image: url(./img/banner.png);
+}
+
+/* Sobre */ 
+
+#sobre{
+    width: 100%;
+}
+
+#sobre .post {
+    min-height: 87vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    flex-direction: row;
+    padding: 15px;
+}
+.fotosobre{
+    width: 55%;
+}
+.fotosobre img{
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.conteudo{
+    width: 43%;
+    padding: 1.2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.conteudo h1{
+    font-size: 3rem;
+    padding: 3rem;
+    color: var(--cor-6);
+    text-shadow: #000 3px -1px 3px;
+}
+
+/* botão */ 
+
+.botao-geral{
+    width: 40%;
+    height: 40%;
+    border-radius: 10px;
+    margin: 2.5em;
+    padding: 8px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 550;
+    background: var(--cor-3);
+    text-align: center;
+    transition: background 500ms, color 500ms;
+    cursor: pointer;
+    color: var(--cor-1);
+}
+
+.botao-geral:hover{
+    background: linear-gradient(to bottom, #000 30%, #8C2703);
+    color:var(--cor-4);
+
+}
+
+@media (max-width:800px) {
+    #sobre .post{
+        min-height: auto;
+        flex-direction: column;
+    }
+}
+
+
+/* Valores */
+
+.valores {
+   color: #fff;
+}
+
+.valores h2{
+    color: var(--cor-6); 
+
+    }
+ 
+/* IMC */
+
+.conteudo_form2_imc h1{
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--cor-1);
+}
+
+.conteudo_form2_imc form {
+display: flex;
+flex-direction: column;
+gap: 1.5rem ;
+text-align: center;
+    
+}
+#imc{
+    margin-top: 10em;
+ }
+
+.span-required_imc {
+    display: none;
+}
+
+.inputs_imc{
+    padding: 8px 5px;
+    outline: none;
+    border: 2px  solid rgb(14, 9, 9);
+    width: 80%;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.inputs_imc:focus{
+    border-color: var(--cor-6);
+}
+
+.box-select_imc{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    font-weight: bold;
+}
+
+.bolinha{
+    margin-left: 5em;
+}
+
+@media (max-width:600px) {
+    .box-select_imc{
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* Calculdora IMC - FIM */
+
+
+/* Plano Ideal - Inicio */
+.plano_ideal{
+background: rgba(245, 243, 243, 0.342);
+border-radius: 10px;
+
+}
+
+.plano_ideal h2{
+    text-align: center;
+    font-size: 2rem
+    ;
+}
+
+
+.planos_box{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    padding: 2rem;
+    
+}
+
+
+
+#titulo_plano{
+    font-size: 1.5rem;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#textoplan{
+text-align: center;
+font-size: 1.4rem;
+
+}
+
+#preco {
+    color: green;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+
+
+/* FIM - Plano ideal*/
+
+
+
+
+/* ------------------ Página Onde Estamos ---------*/
+
+.caixa{
+    margin-top: 2em;
+    padding: 1em;
+    display: grid;
+    place-items: center center;
+}
+
+.caixa h1{
+    color: var(--cor-1);
+    display: block;
+    width: 40%;
+    text-align: center;
+    border-bottom: 5px solid #081826;
+    border-radius: 10px;
+}
+
+.cards{
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 15px;
+    grid-gap: 40px;
+}
+.cart{
+    background-color: var(--cor-1);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 18);
+}
+
+.caixona{
+    position: relative; 
+}
+.caixona img{
+    width: 100%;
+    display: block;
+    border: 20px 20px 0 0;
+}
+.detalhes{
+    padding: 20px 10px ;
+}
+
+.detalhes h3{
+    color: var(--cor-7);
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0 15px 0;
+}
+
+.detalhes p{
+    color: var(--cor-2);
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+/* ----- Equipe ---*/
+
+#equipe-titulo{
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    width: 45%;
+    padding: 25px;
+    border-radius: 6px;
+    border-bottom: 5px solid #081826;
+    color: #fff;
+}
+
+
+.nossa-equipe{
+    width: 100%;
+    background: url(./img-contato/FUNDO.jpg) fixed transparent;
+    background-size: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    color: #EDF3F1;
+}
+
+.caixa-contato{
+    margin: 0 auto;
+    padding: 5em;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#caixa-pequena{
+    margin-bottom: 2em;
+    padding: 15px;
+    background: rgba(15, 14, 14, 0.5);
+    border-radius: 10px;
+}
+
+/* ----- Página Contatos ------- */
+
+#formulario{
+    background: #F27405;
+}
+
+form {
+    background-color:  #EDF3F1;
+    font-family: "Courier New", Courier, monospace;
+    font-size: large;
+  }
+  label {
+    position: relative;
+    width: 60px;
+    color: rgb(0, 0, 0);
+  }
+  input[type="text"] {
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid #F27405;
+    line-height: 20px;
+  }
+  .linha {
+    padding: 5px;
+  }
+
+  /* -----  Formulario ------- */
+
+
+form {
+    padding: 5%;
+    margin:100px;
+    border-radius: 5px;
+}
+
+form input {
+    width: 80%;
+}
+  
